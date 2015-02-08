@@ -66,11 +66,11 @@ if 'emanephy' in info:
     print
 
     print '-' * 40,'\n','clearable statistics\n','-' * 40
-    pprint(emanephy.getClearableStatistics())
+    pprint(sorted(emanephy.getClearableStatistics()))
     print
     
     print '-' * 40,'\n','clearable tables\n','-' * 40
-    pprint(emanephy.getClearableTables())
+    pprint(sorted(emanephy.getClearableTables()))
     print
 
     print '-' * 40,'\n','txpower configuration info\n','-' * 40
