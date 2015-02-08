@@ -30,7 +30,14 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
+import sys
 from emanesh import ControlPortClient
+
+# optionally specify the txpower value
+if len(sys.argv) > 1:
+    txPowerdBm = float(sys.argv[1])
+else:
+    txPowerdBm = 30
 
 # create a control port connection to a running emulator instance
 client = ControlPortClient('node-1',47000)
@@ -58,7 +65,7 @@ try:
     # update the phy rxpower setting - updateConfiguration wants a
     # list of (name,data type,values) entries
     client.updateConfiguration(phyLayerBuildId,
-                               (('txpower',parameterType['txpower'],(30,)),))
+                               (('txpower',parameterType['txpower'],(txPowerdBm,)),))
 
 finally:
     # terminate the connection

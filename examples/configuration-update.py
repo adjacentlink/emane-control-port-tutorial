@@ -30,9 +30,16 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
+import sys
 import socket
 import helpers 
 import emanesh.remotecontrolportapi_pb2 as remotecontrolportapi_pb2
+
+# optionally specify the txpower value
+if len(sys.argv) > 1:
+    txPowerdBm = float(sys.argv[1])
+else:
+    txPowerdBm = 30
 
 # create a socket
 sock = socket.socket()  
@@ -85,7 +92,7 @@ parameter.name = 'txpower'
 any = parameter.values.add()
 
 # set the Any value and type
-helpers.toAny(any,30, configurationTypes['txpower'])
+helpers.toAny(any,txPowerdBm, configurationTypes['txpower'])
     
 print '-' * 25,'\n','request\n','-' * 25
 print request
