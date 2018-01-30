@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright (c) 2015 - Adjacent Link LLC, Bridgewater, New Jersey
+# Copyright (c) 2015,2018 - Adjacent Link LLC, Bridgewater, New Jersey
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -32,8 +32,12 @@
 
 import sys
 import socket
-import helpers 
-import emanesh.remotecontrolportapi_pb2 as remotecontrolportapi_pb2
+import helpers
+
+try:
+    import emane.shell.remotecontrolportapi_pb2 as remotecontrolportapi_pb2
+except:
+    import emanesh.remotecontrolportapi_pb2 as remotecontrolportapi_pb2
 
 # optionally specify the txpower value
 if len(sys.argv) > 1:
@@ -42,7 +46,7 @@ else:
     txPowerdBm = 30
 
 # create a socket
-sock = socket.socket()  
+sock = socket.socket()
 
 # connect to a running emulator instance
 sock.connect(('node-1',47000))
@@ -82,7 +86,7 @@ request.type = remotecontrolportapi_pb2.Request.TYPE_REQUEST_UPDATE
 # set the Request Update type
 request.update.type = remotecontrolportapi_pb2.TYPE_UPDATE_CONFIGURATION
 
-# create a new configuration parameter 
+# create a new configuration parameter
 parameter = request.update.configuration.parameters.add()
 
 # set the parameter name
@@ -93,7 +97,7 @@ any = parameter.values.add()
 
 # set the Any value and type
 helpers.toAny(any,txPowerdBm, configurationTypes['txpower'])
-    
+
 print '-' * 25,'\n','request\n','-' * 25
 print request
 

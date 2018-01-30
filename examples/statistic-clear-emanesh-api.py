@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright (c) 2015 - Adjacent Link LLC, Bridgewater, New Jersey
+# Copyright (c) 2015,2018 - Adjacent Link LLC, Bridgewater, New Jersey
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -30,7 +30,10 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-from emanesh import ControlPortClient
+try:
+    from emane.shell import ControlPortClient
+except:
+    from emanesh import ControlPortClient
 
 # create a control port connection to a running emulator instance
 client = ControlPortClient('node-1',47000)
