@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright (c) 2015 - Adjacent Link LLC, Bridgewater, New Jersey
+# Copyright (c) 2015,2018 - Adjacent Link LLC, Bridgewater, New Jersey
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -32,7 +32,12 @@
 
 import os
 import glob
-from emanesh import Manifest,ManifestException
+
+try:
+    from emane.shell import Manifest,ManifestException
+except:
+    from emanesh import Manifest,ManifestException
+
 from pprint import pprint
 
 # look to see if the EMANEMANIFESTPATH environment variable exists, if
@@ -51,7 +56,7 @@ for directory in manifestpath.split(':'):
             info[manifest.getName()] = manifest
         except ManifestException:
             pass
-            
+
 if not info:
     print "warning: no plugin manifest XML loaded. Check EMANEMANIFESTPATH."
     exit(1)
@@ -68,7 +73,7 @@ if 'emanephy' in info:
     print '-' * 40,'\n','clearable statistics\n','-' * 40
     pprint(sorted(emanephy.getClearableStatistics()))
     print
-    
+
     print '-' * 40,'\n','clearable tables\n','-' * 40
     pprint(sorted(emanephy.getClearableTables()))
     print

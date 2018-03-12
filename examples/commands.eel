@@ -1,35 +1,35 @@
 # set all to 100mW
-0.0 10.99.0.1:47000 emanesh set config * phy txpower=20
-0.0 10.99.0.2:47000 emanesh set config * phy txpower=20
-0.0 10.99.0.3:47000 emanesh set config * phy txpower=20
-0.0 10.99.0.4:47000 emanesh set config * phy txpower=20
-0.0 10.99.0.5:47000 emanesh set config * phy txpower=20
-0.0 10.99.0.6:47000 emanesh set config * phy txpower=20
-0.0 10.99.0.7:47000 emanesh set config * phy txpower=20
-0.0 10.99.0.8:47000 emanesh set config * phy txpower=20
-0.0 10.99.0.9:47000 emanesh set config * phy txpower=20
-0.0 10.99.0.10:47000 emanesh set config * phy txpower=20
+0.0 10.99.0.1:47000 emanesh set config nems phy txpower=20
+0.0 10.99.0.2:47000 emanesh set config nems phy txpower=20
+0.0 10.99.0.3:47000 emanesh set config nems phy txpower=20
+0.0 10.99.0.4:47000 emanesh set config nems phy txpower=20
+0.0 10.99.0.5:47000 emanesh set config nems phy txpower=20
+0.0 10.99.0.6:47000 emanesh set config nems phy txpower=20
+0.0 10.99.0.7:47000 emanesh set config nems phy txpower=20
+0.0 10.99.0.8:47000 emanesh set config nems phy txpower=20
+0.0 10.99.0.9:47000 emanesh set config nems phy txpower=20
+0.0 10.99.0.10:47000 emanesh set config nems phy txpower=20
 
 # set all to 1W
-30.0 10.99.0.1:47000 emanesh set config * phy txpower=30
-30.0 10.99.0.2:47000 emanesh set config * phy txpower=30
-30.0 10.99.0.3:47000 emanesh set config * phy txpower=30
-30.0 10.99.0.4:47000 emanesh set config * phy txpower=30
-30.0 10.99.0.5:47000 emanesh set config * phy txpower=30
-30.0 10.99.0.6:47000 emanesh set config * phy txpower=30
-30.0 10.99.0.7:47000 emanesh set config * phy txpower=30
-30.0 10.99.0.8:47000 emanesh set config * phy txpower=30
-30.0 10.99.0.9:47000 emanesh set config * phy txpower=30
-30.0 10.99.0.10:47000 emanesh set config * phy txpower=30
+30.0 10.99.0.1:47000 emanesh set config nems phy txpower=30
+30.0 10.99.0.2:47000 emanesh set config nems phy txpower=30
+30.0 10.99.0.3:47000 emanesh set config nems phy txpower=30
+30.0 10.99.0.4:47000 emanesh set config nems phy txpower=30
+30.0 10.99.0.5:47000 emanesh set config nems phy txpower=30
+30.0 10.99.0.6:47000 emanesh set config nems phy txpower=30
+30.0 10.99.0.7:47000 emanesh set config nems phy txpower=30
+30.0 10.99.0.8:47000 emanesh set config nems phy txpower=30
+30.0 10.99.0.9:47000 emanesh set config nems phy txpower=30
+30.0 10.99.0.10:47000 emanesh set config nems phy txpower=30
 
 # set all to 5W
-60.0 10.99.0.1:47000 emanesh set config * phy txpower=37
-60.0 10.99.0.2:47000 emanesh set config * phy txpower=37
-60.0 10.99.0.3:47000 emanesh set config * phy txpower=37
-60.0 10.99.0.4:47000 emanesh set config * phy txpower=37
-60.0 10.99.0.5:47000 emanesh set config * phy txpower=37
-60.0 10.99.0.6:47000 emanesh set config * phy txpower=37
-60.0 10.99.0.7:47000 emanesh set config * phy txpower=37
-60.0 10.99.0.8:47000 emanesh set config * phy txpower=37
-60.0 10.99.0.9:47000 emanesh set config * phy txpower=37
-60.0 10.99.0.10:47000 emanesh set config * phy txpower=37
+60.0 10.99.0.1:47000 emanesh set config nems phy txpower=37
+60.0 10.99.0.2:47000 emanesh set config nems phy txpower=37
+60.0 10.99.0.3:47000 emanesh set config nems phy txpower=37
+60.0 10.99.0.4:47000 emanesh set config nems phy txpower=37
+60.0 10.99.0.5:47000 emanesh set config nems phy txpower=37
+60.0 10.99.0.6:47000 emanesh set config nems phy txpower=37
+60.0 10.99.0.7:47000 emanesh set config nems phy txpower=37
+60.0 10.99.0.8:47000 emanesh set config nems phy txpower=37
+60.0 10.99.0.9:47000 emanesh set config nems phy txpower=37
+60.0 10.99.0.10:47000 emanesh set config nems phy txpower=37

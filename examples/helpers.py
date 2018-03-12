@@ -1,4 +1,5 @@
-# Copyright (c) 2014-2015 - Adjacent Link LLC, Bridgewater, New Jersey
+# Copyright (c) 2014-2015,2018 - Adjacent Link LLC, Bridgewater,
+# New Jersey
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -29,7 +30,11 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-import emanesh.remotecontrolportapi_pb2 as remotecontrolportapi_pb2
+try:
+    import emane.shell.remotecontrolportapi_pb2 as remotecontrolportapi_pb2
+except:
+    import emanesh.remotecontrolportapi_pb2 as remotecontrolportapi_pb2
+
 import struct
 import collections
 

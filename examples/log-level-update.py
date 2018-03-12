@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright (c) 2015 - Adjacent Link LLC, Bridgewater, New Jersey
+# Copyright (c) 2015,2018 - Adjacent Link LLC, Bridgewater, New Jersey
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -31,11 +31,15 @@
 #
 
 import socket
-import helpers 
-import emanesh.remotecontrolportapi_pb2 as remotecontrolportapi_pb2
+import helpers
+
+try:
+    import emane.shell.remotecontrolportapi_pb2 as remotecontrolportapi_pb2
+except:
+    import emanesh.remotecontrolportapi_pb2 as remotecontrolportapi_pb2
 
 # create a socket
-sock = socket.socket()  
+sock = socket.socket()
 
 # connect to a running emulator instance
 sock.connect(('node-1',47000))
